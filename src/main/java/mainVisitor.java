@@ -18,13 +18,19 @@ public class mainVisitor implements simplifiedAssemblerVisitor{
         }
         if (ctx.push_rule() != null)
             return this.visitPush_rule(ctx.push_rule());
+        if (ctx.mov_rule() != null)
+            return this.visitMov_rule(ctx.mov_rule());
         return null;
     }
 
     public Object visitPush_rule(simplifiedAssemblerParser.Push_ruleContext ctx) {
-        if (ctx.PUSH() != null) {
+        if (ctx.PUSH() != null && ctx.exp() != null) {
             System.out.println("pushuje");
-            System.out.println("eax: " + RegistersSet.getREGISTERS().get("%eac"));
+            try {
+                System.out.println("eax: " + RegistersSet.getREGISTERS().get("%eax").getValue());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
             Stack.pushToStack((Integer)this.visitExp(ctx.exp()));
             return null;
         }
@@ -32,8 +38,28 @@ public class mainVisitor implements simplifiedAssemblerVisitor{
     }
 
     public Object visitMov_rule(simplifiedAssemblerParser.Mov_ruleContext ctx) {
-        if (ctx.MOV() != null && ctx.exp() != null) {
-            RegistersSet.getREGISTERS().get(ctx.REGISTER().getText()).setValue((String) this.visitExp(ctx.exp()));
+        if (ctx.MOV() != null && ctx.exp() != null && ctx.REGISTER() != null) {
+            RegistersSet.getREGISTERS().get(ctx.REGISTER().getText().toLowerCase()).setValue((this.visitExp(ctx.exp()).toString()));
+            try {
+                System.out.println("a" + RegistersSet.getREGISTERS().get("%eax").getValue());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+            try {
+                System.out.println("b" + RegistersSet.getREGISTERS().get("%ebx").getValue());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+            try {
+                System.out.println("c" + RegistersSet.getREGISTERS().get("%ecx").getValue());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+            try {
+                System.out.println("d" + RegistersSet.getREGISTERS().get("%edx").getValue());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         }
         return null;
     }
@@ -43,9 +69,9 @@ public class mainVisitor implements simplifiedAssemblerVisitor{
     }
 
     public Object visitExp(simplifiedAssemblerParser.ExpContext ctx) {
-        if (ctx.PLUS() != null) {
+        if (ctx.PLUS() != null && ctx.exp() != null && ctx.term() != null) {
             return (Integer) this.visitExp(ctx.exp()) + (Integer) this.visitTerm(ctx.term());
-        } else if (ctx.MINUS() != null) {
+        } else if (ctx.MINUS() != null && ctx.exp() != null && ctx.term() != null) {
             return (Integer) this.visitExp(ctx.exp()) - (Integer) this.visitTerm(ctx.term());
         } else if (ctx.term() != null){
             return (Integer) this.visitTerm(ctx.term());
@@ -76,7 +102,13 @@ public class mainVisitor implements simplifiedAssemblerVisitor{
         if(ctx.DIGIT() != null) {
             return Integer.parseInt(ctx.DIGIT().getText());
         } else if (ctx.REGISTER() != null){
-            return RegistersSet.getREGISTERS().get(ctx.REGISTER().getText());
+            try {
+                return Integer.parseInt(RegistersSet.getREGISTERS().get(ctx.REGISTER().getText().toLowerCase()).getValue());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+
+
         }
         return null;
     }

@@ -1,4 +1,6 @@
+import data_set.RegistersSet;
 import data_set.Stack;
+import excepions.WrongSyntaxException;
 import grammar.*;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CharStream;
@@ -12,19 +14,30 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        new RegistersSet();
         String expression = "mov 4 -, %ecx";
         Scanner scanner = new Scanner(System.in);
         while(scanner.hasNextLine()) {
-            String tmp = scanner.nextLine();
-            CharStream charStream = CharStreams.fromString(tmp);
-            simplifiedAssemblerLexer lexer = new simplifiedAssemblerLexer(charStream);
-            simplifiedAssemblerParser parser = new simplifiedAssemblerParser(new CommonTokenStream(lexer));
+            try {
+                String tmp = scanner.nextLine();
+                CharStream charStream = CharStreams.fromString(tmp + '\n');
+                simplifiedAssemblerLexer lexer = new simplifiedAssemblerLexer(charStream);
+                simplifiedAssemblerParser parser = new simplifiedAssemblerParser(new CommonTokenStream(lexer));
 
-            ParseTree tree = parser.parser_rule();
+                lexer.removeErrorListeners();
+                parser.removeErrorListeners();
+                lexer.addErrorListener(new simplifiedAssemblerErrorListener());
+                parser.addErrorListener(new simplifiedAssemblerErrorListener());
 
-            mainVisitor mainVisitor = new mainVisitor();
+                ParseTree tree = parser.parser_rule();
 
-            mainVisitor.visit(tree);
+                mainVisitor mainVisitor = new mainVisitor();
+
+                mainVisitor.visit(tree);
+            } catch (RuntimeException ex) {
+                System.out.println(ex.getMessage());
+            }
+
         }
 //        Stack.pushToStack(1);
 //        Stack.pushToStack(2);

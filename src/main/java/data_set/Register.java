@@ -3,7 +3,10 @@ package data_set;
 public class Register {
     private String value;
 
-    public String getValue() {
+    public String getValue() throws Exception {
+        if (value == "???") {
+            throw new Exception("???");
+        }
         return value;
     }
 

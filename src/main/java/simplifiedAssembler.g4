@@ -1,5 +1,5 @@
 grammar simplifiedAssembler;
-parser_rule: (INT_RULE | push_rule | mov_rule | xor_rule);
+parser_rule: (INT_RULE | push_rule | mov_rule | xor_rule) EOL;
 INT_RULE: ('int 0x80' | 'INT 0x80');
 push_rule: PUSH exp;
 mov_rule: MOV exp SEPARATOR REGISTER;
@@ -19,4 +19,5 @@ MULTIPY: '*';
 L_BRACKET: '(';
 P_BRACKET: ')';
 REGISTER: ('%eax' | '%ebx' | '%ecx' | '%edx' | '%EAX' | '%EBX' | '%ECX' | '%EDX');
+EOL: '\n';
 WS: (' ' | '\t') -> skip;
