@@ -7,15 +7,14 @@ public class Stack {
     public static void pushToStack(int value) {
         stack.add(value);
     }
-    public static int popFromStack() {
+    public static int popFromStack() throws Exception {
         if (!stack.isEmpty()) {
             int value = stack.remove(stack.size()-1);
             System.out.println(value);
             return value;
         } else {
-            System.out.println("ERROR - DO ZMANINY ZGODNIE Z ZALOZENIAMI");
-            //TU WYJĄTEK
-            return -1;
+            //System.out.println("ERROR - DO ZMANINY ZGODNIE Z ZALOZENIAMI");
+            throw new Exception("ERROR - DO ZMANINY ZGODNIE Z ZALOZENIAMI");
         }
     }
 

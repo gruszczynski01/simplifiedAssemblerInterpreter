@@ -3,7 +3,7 @@ parser_rule: (INT_RULE | push_rule | mov_rule | xor_rule);
 INT_RULE: ('int 0x80' | 'INT 0x80');
 push_rule: PUSH exp;
 mov_rule: MOV exp SEPARATOR REGISTER;
-xor_rule: XOR exp SEPARATOR exp;
+xor_rule: XOR exp SEPARATOR REGISTER;
 exp: exp PLUS term | exp MINUS term | term;
 term: term MULTIPY factor | factor;
 factor: L_BRACKET exp P_BRACKET | value;
