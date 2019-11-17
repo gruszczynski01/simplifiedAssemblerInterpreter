@@ -1,12 +1,10 @@
 import data_set.RegistersSet;
-import data_set.Stack;
-import excepions.WrongSyntaxException;
+
 import grammar.*;
-import org.antlr.v4.runtime.ANTLRInputStream;
-import org.antlr.v4.runtime.CharStream;
-import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.CharStreams;
 
 
 import java.io.IOException;
