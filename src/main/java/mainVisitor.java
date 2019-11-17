@@ -1,5 +1,7 @@
 import data_set.RegistersSet;
 import data_set.Stack;
+import excepions.EmptyStackException;
+import excepions.UnknownValueException;
 import grammar.*;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -11,8 +13,7 @@ public class mainVisitor implements simplifiedAssemblerVisitor{
         if (ctx.INT_RULE() != null) {
             try {
                 Stack.popFromStack();
-            } catch (Exception e) {
-                //            e.printStackTrace();
+            } catch (EmptyStackException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -20,18 +21,19 @@ public class mainVisitor implements simplifiedAssemblerVisitor{
             return this.visitPush_rule(ctx.push_rule());
         if (ctx.mov_rule() != null)
             return this.visitMov_rule(ctx.mov_rule());
+        if (ctx.xor_rule() != null)
+            return this.visitXor_rule(ctx.xor_rule());
         return null;
     }
 
     public Object visitPush_rule(simplifiedAssemblerParser.Push_ruleContext ctx) {
         if (ctx.PUSH() != null && ctx.exp() != null) {
-            System.out.println("pushuje");
             try {
-                System.out.println("eax: " + RegistersSet.getREGISTERS().get("%eax").getValue());
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
+                Stack.pushToStack(this.visitExp(ctx.exp()).toString());
+            } catch (UnknownValueException e) {
+                Stack.pushToStack(e.getMessage());
             }
-            Stack.pushToStack((Integer)this.visitExp(ctx.exp()));
+
             return null;
         }
         return null;
@@ -39,36 +41,48 @@ public class mainVisitor implements simplifiedAssemblerVisitor{
 
     public Object visitMov_rule(simplifiedAssemblerParser.Mov_ruleContext ctx) {
         if (ctx.MOV() != null && ctx.exp() != null && ctx.REGISTER() != null) {
-            RegistersSet.getREGISTERS().get(ctx.REGISTER().getText().toLowerCase()).setValue((this.visitExp(ctx.exp()).toString()));
-            try {
-                System.out.println("a" + RegistersSet.getREGISTERS().get("%eax").getValue());
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-            try {
-                System.out.println("b" + RegistersSet.getREGISTERS().get("%ebx").getValue());
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-            try {
-                System.out.println("c" + RegistersSet.getREGISTERS().get("%ecx").getValue());
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-            try {
-                System.out.println("d" + RegistersSet.getREGISTERS().get("%edx").getValue());
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
+           try {
+               RegistersSet.getREGISTERS().get(ctx.REGISTER().getText().toLowerCase()).setValue((this.visitExp(ctx.exp()).toString()));
+           } catch (UnknownValueException ex) {
+               RegistersSet.getREGISTERS().get(ctx.REGISTER().getText().toLowerCase()).setValue(ex.getMessage());
+
+           }
         }
         return null;
     }
 
     public Object visitXor_rule(simplifiedAssemblerParser.Xor_ruleContext ctx) {
+        if (ctx.XOR() != null) {
+            try {
+                Integer result = (Integer)this.visitExp(ctx.exp()) ^ Integer.parseInt(RegistersSet.getREGISTERS().get(ctx.REGISTER().getText().toLowerCase()).getValue());
+                RegistersSet.getREGISTERS().get(ctx.REGISTER().getText()).setValue(result.toString());
+            } catch (UnknownValueException e) {
+                String left_side;
+                String right_side;
+                //left part
+                try {
+                    left_side = this.visitExp(ctx.exp()).toString();
+                } catch (UnknownValueException e_left) {
+                    left_side = e_left.getMessage();
+                }
+                //right part
+                try {
+                    right_side = RegistersSet.getREGISTERS().get(ctx.REGISTER().getText().toLowerCase()).getValue();
+                } catch (UnknownValueException e_right) {
+                    right_side = e_right.getMessage();
+                }
+                if(right_side.equals("???") && left_side.equals("???")) {
+                    RegistersSet.getREGISTERS().get(ctx.REGISTER().getText()).setValue("0");
+                }else {
+                    RegistersSet.getREGISTERS().get(ctx.REGISTER().getText()).setValue(e.getMessage());
+                }
+
+            }
+        }
         return null;
     }
 
-    public Object visitExp(simplifiedAssemblerParser.ExpContext ctx) {
+    public Object visitExp(simplifiedAssemblerParser.ExpContext ctx) throws UnknownValueException{
         if (ctx.PLUS() != null && ctx.exp() != null && ctx.term() != null) {
             return (Integer) this.visitExp(ctx.exp()) + (Integer) this.visitTerm(ctx.term());
         } else if (ctx.MINUS() != null && ctx.exp() != null && ctx.term() != null) {
@@ -79,7 +93,7 @@ public class mainVisitor implements simplifiedAssemblerVisitor{
         return null;
     }
 
-    public Object visitTerm(simplifiedAssemblerParser.TermContext ctx) {
+    public Object visitTerm(simplifiedAssemblerParser.TermContext ctx) throws UnknownValueException{
         if (ctx.MULTIPY() != null) {
             return (Integer) this.visitTerm(ctx.term()) * (Integer) this.visitFactor(ctx.factor());
         } else if (ctx.factor() != null) {
@@ -88,27 +102,20 @@ public class mainVisitor implements simplifiedAssemblerVisitor{
         return null;
     }
 
-    public Object visitFactor(simplifiedAssemblerParser.FactorContext ctx) {
+    public Object visitFactor(simplifiedAssemblerParser.FactorContext ctx) throws UnknownValueException {
         if (ctx.value() != null) {
             return this.visitValue(ctx.value());
         } else if(ctx.exp() != null ){
-            System.out.println("moze dopisac do tego ifa sprawdzenie czy na bank sa nawiasy czy cos");
             return  (Integer) this.visitExp(ctx.exp());
         }
         return null;
     }
 
-    public Object visitValue(simplifiedAssemblerParser.ValueContext ctx) {
+    public Object visitValue(simplifiedAssemblerParser.ValueContext ctx) throws UnknownValueException{
         if(ctx.DIGIT() != null) {
             return Integer.parseInt(ctx.DIGIT().getText());
         } else if (ctx.REGISTER() != null){
-            try {
-                return Integer.parseInt(RegistersSet.getREGISTERS().get(ctx.REGISTER().getText().toLowerCase()).getValue());
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-
-
+            return Integer.parseInt(RegistersSet.getREGISTERS().get(ctx.REGISTER().getText().toLowerCase()).getValue());
         }
         return null;
     }

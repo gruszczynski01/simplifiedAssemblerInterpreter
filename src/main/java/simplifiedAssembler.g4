@@ -20,4 +20,4 @@ L_BRACKET: '(';
 P_BRACKET: ')';
 REGISTER: ('%eax' | '%ebx' | '%ecx' | '%edx' | '%EAX' | '%EBX' | '%ECX' | '%EDX');
 EOL: '\n';
-WS: (' ' | '\t') -> skip;
+WS: (' ' | '\t' | EOL) -> skip;

@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="simplifiedAssemblerInterpreter:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cbc56b50-9e49-4f67-8672-465701f55fad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/excepions/WrongSyntaxException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerErrorListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/simplifiedAssemblerInterpreter_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/excepions/EmptyStackException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/excepions/UnknownValueException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data_set/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_set/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssembler.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssembler.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssembler.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssembler.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data_set/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_set/Stack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerLexer.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mainVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mainVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/simplifiedAssembler.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simplifiedAssembler.g4" afterDir="false" />
     </list>
@@ -27,18 +33,30 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="simpified_assembler_interpreter" />
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8505942">
+    <splitter split-orientation="horizontal" split-proportion="0.8097282">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+                <state relative-caret-position="300">
+                  <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pom.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="361">
+                  <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -56,13 +74,39 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/data_set/Register.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="135">
+                  <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/excepions/UnknownValueException.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="30">
+                  <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/excepions/WrongSyntaxException.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+                <state relative-caret-position="45">
+                  <caret line="5" column="5" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/data_set/Stack.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="23" selection-start-line="23" selection-end-line="23" />
                   <folding>
-                    <element signature="e#276#277#0" expanded="true" />
-                    <element signature="e#316#317#0" expanded="true" />
+                    <element signature="imports" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -71,44 +115,22 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerParser.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
+                <state relative-caret-position="16">
                   <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="jar://$MAVEN_REPOSITORY$/org/antlr/antlr4-runtime/4.7.1/antlr4-runtime-4.7.1.jar!/org/antlr/v4/runtime/BaseErrorListener.class">
+            <entry file="file://$PROJECT_DIR$/src/main/java/data_set/RegistersSet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="jar://$MAVEN_REPOSITORY$/org/antlr/antlr4-runtime/4.7.1/antlr4-runtime-4.7.1.jar!/org/antlr/v4/runtime/ANTLRErrorListener.class">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="11" column="35" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="35" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/simplifiedAssembler.g4">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="28" selection-start-column="28" selection-end-column="28" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerListener.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+                <state relative-caret-position="135">
+                  <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#495#496#0" expanded="true" />
+                    <element signature="e#527#528#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -116,10 +138,13 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/mainVisitor.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="873">
-                  <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+                <state relative-caret-position="912">
+                  <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#5232#5233#0" expanded="true" />
+                    <element signature="e#5321#5322#0" expanded="true" />
+                    <element signature="e#5405#5406#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -132,8 +157,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/simplifiedAssembler.g4">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+                <state relative-caret-position="150">
+                  <caret line="10" selection-start-line="10" selection-end-line="10" />
                 </state>
               </provider>
             </entry>
@@ -152,6 +177,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>getText</find>
+      <find>system</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,16 +190,18 @@
         <option value="$PROJECT_DIR$/src/main/java/myGrammar.g4" />
         <option value="$PROJECT_DIR$/gen/simplifiedAssemblerVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerParser.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/data_set/Stack.java" />
         <option value="$PROJECT_DIR$/src/main/java/data_set/RegistersSet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/data_set/Register.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mainVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/simplifiedAssembler.g4" />
         <option value="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerErrorParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerErrorListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/excepions/WrongSyntaxException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/excepions/EmptyStackException.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/excepions/UnknownValue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/data_set/Register.java" />
+        <option value="$PROJECT_DIR$/src/main/java/simplifiedAssembler.g4" />
+        <option value="$PROJECT_DIR$/src/main/java/data_set/Stack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mainVisitor.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -204,7 +232,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -268,6 +295,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,7 +319,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -317,6 +345,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="simplifiedAssemblerInterpreter" />
+      <option name="INPUT_FILE" value="$USER_HOME$/Downloads/Lab 1 I7B4S1 - do wysłania 2/Lab 1 - input.txt" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -342,12 +371,13 @@
       <workItem from="1573841478219" duration="3259000" />
       <workItem from="1573845627865" duration="21867000" />
       <workItem from="1573910835625" duration="6296000" />
-      <workItem from="1573931907339" duration="3822000" />
+      <workItem from="1573931907339" duration="10398000" />
+      <workItem from="1573997985556" duration="7723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39205000" />
+    <option name="totallyTimeSpent" value="53504000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -360,30 +390,31 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23104435" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49814126" visible="true" weight="0.23104435" />
+      <window_info id="Structure" order="1" sideWeight="0.5018587" side_tool="true" weight="0.23104435" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="ANTLR Preview" order="0" sideWeight="0.70386267" weight="0.3253012" />
-      <window_info anchor="bottom" id="Tool Output" order="1" sideWeight="0.49570817" weight="0.32891566" />
-      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.48569384" weight="0.32891566" />
+      <window_info id="Favorites" order="6" sideWeight="0.502008" side_tool="true" weight="0.18311875" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="0" sideWeight="0.70314735" weight="0.3253012" />
+      <window_info anchor="bottom" id="Tool Output" order="1" sideWeight="0.49499285" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.47496423" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.54077256" visible="true" weight="0.22048193" />
-      <window_info anchor="bottom" id="Debug" order="6" sideWeight="0.49928468" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.53004295" visible="true" weight="0.45783132" />
+      <window_info anchor="bottom" id="Debug" order="6" sideWeight="0.4985694" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.4985694" weight="0.32891566" />
+      <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.49785408" weight="0.32891566" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4985694" weight="0.32891566" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49785408" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Statistic" order="13" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.4985694" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.45922747" side_tool="true" visible="true" weight="0.22048193" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.50143063" side_tool="true" weight="0.4" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -397,40 +428,40 @@
       <window_info anchor="right" id="CDI" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.021459227" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49814126" weight="0.23104435" />
+      <window_info id="Structure" order="1" sideWeight="0.5018587" side_tool="true" weight="0.23104435" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" order="0" />
-      <window_info anchor="bottom" id="ANTLR Preview" order="1" sideWeight="0.59871244" weight="0.2626506" />
-      <window_info anchor="bottom" id="Tool Output" order="2" sideWeight="0.4985694" weight="0.32891566" />
-      <window_info anchor="bottom" id="Messages" order="3" sideWeight="0.4914163" weight="0.32891566" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49356222" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Statistic" order="14" />
-      <window_info anchor="bottom" id="Terminal" order="15" sideWeight="0.4985694" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="16" sideWeight="0.5064378" side_tool="true" weight="0.32891566" />
-      <window_info anchor="right" id="CDI" order="0" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.3297568" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Database" order="9" />
+      <window_info id="Favorites" order="6" sideWeight="0.502008" side_tool="true" weight="0.18311875" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="0" sideWeight="0.70314735" weight="0.3253012" />
+      <window_info anchor="bottom" id="Tool Output" order="1" sideWeight="0.49499285" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.47496423" weight="0.32891566" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.53004295" visible="true" weight="0.45783132" />
+      <window_info anchor="bottom" id="Debug" order="6" sideWeight="0.4985694" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.49785408" weight="0.32891566" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49785408" weight="0.32891566" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Statistic" order="13" sideWeight="0.49928468" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.4985694" weight="0.32891566" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.50143063" side_tool="true" weight="0.4" />
+      <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.32891566" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.3297568" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="CDI" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,13 +489,6 @@
     <entry file="file://$PROJECT_DIR$/gen/simplifiedAssembler.interp" />
     <entry file="file://$PROJECT_DIR$/gen/simplifiedAssemblerVisitor.java" />
     <entry file="file://$PROJECT_DIR$/gen/simplifiedAssemblerBaseVisitor.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/data_set/Registers.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/grammar/simplifiedAssembler.tokens">
       <provider selected="true" editor-type-id="text-editor">
@@ -477,24 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
           <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/data_set/Stack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/data_set/RegistersSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -522,13 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/data_set/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -536,23 +535,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerErrorParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="144" selection-start-line="12" selection-start-column="116" selection-end-line="12" selection-end-column="144" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/simplifiedAssembler.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerErrorParser.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/antlr/antlr4-runtime/4.7.1/antlr4-runtime-4.7.1.jar!/org/antlr/v4/runtime/ANTLRErrorListener.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -567,31 +550,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainVisitor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/excepions/EmptyStackException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="873">
-          <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/excepions/WrongSyntaxException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+        <state relative-caret-position="45">
+          <caret line="5" column="5" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/excepions/UnknownValueException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/data_set/RegistersSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding>
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/data_set/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/simplifiedAssembler.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/grammar/simplifiedAssemblerParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="16">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5232#5233#0" expanded="true" />
+            <element signature="e#5321#5322#0" expanded="true" />
+            <element signature="e#5405#5406#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/data_set/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -607,11 +639,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+        <state relative-caret-position="300">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -621,10 +660,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>simplifiedAssemblerInterpreter:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -671,7 +712,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

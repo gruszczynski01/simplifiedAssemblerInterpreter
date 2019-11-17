@@ -20,6 +20,9 @@ public class Main {
         while(scanner.hasNextLine()) {
             try {
                 String tmp = scanner.nextLine();
+                if (tmp.trim().isEmpty()) {
+                    continue;
+                }
                 CharStream charStream = CharStreams.fromString(tmp + '\n');
                 simplifiedAssemblerLexer lexer = new simplifiedAssemblerLexer(charStream);
                 simplifiedAssemblerParser parser = new simplifiedAssemblerParser(new CommonTokenStream(lexer));

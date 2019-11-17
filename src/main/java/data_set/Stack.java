@@ -1,20 +1,22 @@
 package data_set;
 
+import excepions.EmptyStackException;
+
 import java.util.ArrayList;
 
 public class Stack {
-    private static ArrayList<Integer> stack = new ArrayList<Integer>();
-    public static void pushToStack(int value) {
+    private static ArrayList<String> stack = new ArrayList<String>();
+    public static void pushToStack(String value) {
         stack.add(value);
     }
-    public static int popFromStack() throws Exception {
+    public static String popFromStack() throws EmptyStackException {
         if (!stack.isEmpty()) {
-            int value = stack.remove(stack.size()-1);
+            String value = stack.remove(stack.size()-1);
             System.out.println(value);
             return value;
         } else {
             //System.out.println("ERROR - DO ZMANINY ZGODNIE Z ZALOZENIAMI");
-            throw new Exception("ERROR - DO ZMANINY ZGODNIE Z ZALOZENIAMI");
+            throw new EmptyStackException("Error");
         }
     }
 
