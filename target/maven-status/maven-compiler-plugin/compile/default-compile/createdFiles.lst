@@ -5,10 +5,10 @@ grammar/simplifiedAssemblerParser$TermContext.class
 grammar/simplifiedAssemblerParser$Xor_ruleContext.class
 grammar/simplifiedAssemblerParser$Mov_ruleContext.class
 excepions/UnknownValueException.class
+MainVisitor.class
 data_set/Stack.class
 grammar/simplifiedAssemblerBaseVisitor.class
 grammar/simplifiedAssemblerParser$Push_ruleContext.class
-mainVisitor.class
 Main.class
 grammar/simplifiedAssemblerListener.class
 grammar/simplifiedAssemblerErrorListener.class

@@ -13,7 +13,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
         new RegistersSet();
-        String expression = "mov 4 -, %ecx";
         Scanner scanner = new Scanner(System.in);
         while(scanner.hasNextLine()) {
             try {
@@ -32,23 +31,14 @@ public class Main {
 
                 ParseTree tree = parser.parser_rule();
 
-                mainVisitor mainVisitor = new mainVisitor();
+                MainVisitor mainVisitor = new MainVisitor();
 
                 mainVisitor.visit(tree);
+
             } catch (RuntimeException ex) {
                 System.out.println(ex.getMessage());
             }
 
         }
-//        Stack.pushToStack(1);
-//        Stack.pushToStack(2);
-//        Stack.pushToStack(3);
-//        Stack.pushToStack(4);
-//
-//        Stack.popFromStack();
-//        Stack.popFromStack();
-//        Stack.popFromStack();
-//        Stack.popFromStack();
-//        Stack.popFromStack();
     }
 }

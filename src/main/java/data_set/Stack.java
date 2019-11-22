@@ -15,8 +15,7 @@ public class Stack {
             System.out.println(value);
             return value;
         } else {
-            //System.out.println("ERROR - DO ZMANINY ZGODNIE Z ZALOZENIAMI");
-            throw new EmptyStackException("Error");
+            throw new EmptyStackException("???");
         }
     }
 

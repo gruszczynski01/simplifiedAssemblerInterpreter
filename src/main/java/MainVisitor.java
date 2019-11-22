@@ -8,7 +8,7 @@ import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.RuleNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
-public class mainVisitor implements simplifiedAssemblerVisitor{
+public class MainVisitor implements simplifiedAssemblerVisitor{
     public Object visitParser_rule(simplifiedAssemblerParser.Parser_ruleContext ctx) {
         if (ctx.INT_RULE() != null) {
             try {
@@ -57,23 +57,9 @@ public class mainVisitor implements simplifiedAssemblerVisitor{
                 Integer result = (Integer)this.visitExp(ctx.exp()) ^ Integer.parseInt(RegistersSet.getREGISTERS().get(ctx.REGISTER().getText().toLowerCase()).getValue());
                 RegistersSet.getREGISTERS().get(ctx.REGISTER().getText()).setValue(result.toString());
             } catch (UnknownValueException e) {
-                String left_side;
-                String right_side;
-                //left part
-                try {
-                    left_side = this.visitExp(ctx.exp()).toString();
-                } catch (UnknownValueException e_left) {
-                    left_side = e_left.getMessage();
-                }
-                //right part
-                try {
-                    right_side = RegistersSet.getREGISTERS().get(ctx.REGISTER().getText().toLowerCase()).getValue();
-                } catch (UnknownValueException e_right) {
-                    right_side = e_right.getMessage();
-                }
-                if(right_side.equals("???") && left_side.equals("???")) {
+                if (ctx.REGISTER().getText().equals(ctx.exp().getText())) {
                     RegistersSet.getREGISTERS().get(ctx.REGISTER().getText()).setValue("0");
-                }else {
+                } else {
                     RegistersSet.getREGISTERS().get(ctx.REGISTER().getText()).setValue(e.getMessage());
                 }
 
